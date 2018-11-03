@@ -4,23 +4,50 @@ jobs:
     docker:
     # specify the version you desire here
     - image: circleci/node:10.11
+
     steps:
     - checkout
+
+    # Download and cache dependencies
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        # fallback to using the latest cache if no exact match is found
+        - v1-dependencies-
+
+    - run: npm install
+
+    - save_cache:
+        paths:
+        - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
+
     - run:
         name: Lint
-        command: npm install && npm run lint
+        command: npm run lint
+
   test:
     docker:
     # specify the version you desire here
     - image: circleci/node:10.11
+
     steps:
     - checkout
+
+    # Download and cache dependencies
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        # fallback to using the latest cache if no exact match is found
+        - v1-dependencies-
+
+    - run: npm install
+
+    - save_cache:
+        paths:
+        - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
+
     - run:
         name: Test
-        command: npm install && npm test
-workflows:
-  version: 2
-  lint_and_test:
-    jobs:
-    - lint
-    - test
+        command: npm test
