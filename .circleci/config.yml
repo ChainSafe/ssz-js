@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  lint:
+    docker:
+    # specify the version you desire here
+    - image: circleci/node:10.11
+    steps:
+    - checkout
+    - run:
+        name: Lint
+        command: npm install && npm run lint
+  test:
+    docker:
+    # specify the version you desire here
+    - image: circleci/node:10.11
+    steps:
+    - checkout
+    - run:
+        name: Test
+        command: npm install && npm test
+workflows:
+  version: 2
+  lint_and_test:
+    jobs:
+    - lint
+    - test
