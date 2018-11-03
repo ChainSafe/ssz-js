@@ -51,3 +51,9 @@ jobs:
     - run:
         name: Test
         command: npm test
+
+workflows:
+  lint_and_test:
+    jobs:
+      - lint
+      - test
