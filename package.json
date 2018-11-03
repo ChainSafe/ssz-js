@@ -4,7 +4,8 @@
   "description": "A pure JS implementation of simple serialize",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
