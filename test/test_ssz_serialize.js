@@ -1,3 +1,19 @@
+//Simple Serialize (SSZ) JS
+//Copyright (C) 2018 ChainSafe Systems
+
+ // This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 const assert = require('chai').assert;
 const BN = require('bn.js');
 const hexToBytes = require('./utils/hexToBytes').hexToBytes;
@@ -11,19 +27,19 @@ describe('SimpleSerialize - serializes booleans', () => {
 
     /** bool */
 
-	it(`successfully serializes boolean true value`, () => {        
-        
+	it(`successfully serializes boolean true value`, () => {
+
         let boolInput = true;
         let result = serialize(boolInput, 'bool');
-        
+
         assert.isNotNull(result, 'bool result should not be null');
         let intResult = result.readInt8(0);
         assert.isTrue(intResult == 1, boolInput, 'bool result should be same as input');
 
     });
 
-    it(`successfully serializes boolean false value`, () => {        
-        
+    it(`successfully serializes boolean false value`, () => {
+
         let boolInput = false;
         let result = serialize(boolInput, 'bool');
 
@@ -39,8 +55,8 @@ describe('SimpleSerialize - serializes hash32', () => {
 
     /** hash32 */
 
-	it(`successfully serializes hash32`, () => {        
-        
+	it(`successfully serializes hash32`, () => {
+
         let hashInput = hexToBytes('ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
         let result = serialize(hashInput, 'hash32');
 
@@ -50,9 +66,9 @@ describe('SimpleSerialize - serializes hash32', () => {
     });
 
     it(`errors when serializing hash32, given hash less than 32 bytes`, () => {
-        
-        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223'); 
-        
+
+        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223');
+
         assert.throws(
             () => serialize(hashWithIncorrectLength, 'hash32'),
             Error,
@@ -62,9 +78,9 @@ describe('SimpleSerialize - serializes hash32', () => {
     });
 
     it(`errors when serializing hash32, given hash greater than 32 bytes`, () => {
-        
-        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015addfsdfds'); 
-        
+
+        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015addfsdfds');
+
         assert.throws(
             () => serialize(hashWithIncorrectLength, 'hash32'),
             Error,
@@ -78,8 +94,8 @@ describe('SimpleSerialize - serializes hash96', () => {
 
     /** hash32 */
 
-	it(`successfully serializes hash96`, () => {        
-        
+	it(`successfully serializes hash96`, () => {
+
         let hashInput = hexToBytes('ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015adba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015adba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
         let result = serialize(hashInput, 'hash96');
 
@@ -89,9 +105,9 @@ describe('SimpleSerialize - serializes hash96', () => {
     });
 
     it(`errors when serializing hash96, given hash less than 96 bytes`, () => {
-        
-        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'); 
-        
+
+        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
+
         assert.throws(
             () => serialize(hashWithIncorrectLength, 'hash96'),
             Error,
@@ -101,9 +117,9 @@ describe('SimpleSerialize - serializes hash96', () => {
     });
 
     it(`errors when serializing hash96, given hash greater than 96 bytes`, () => {
-        
-        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015addfsdfds'); 
-        
+
+        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015addfsdfds');
+
         assert.throws(
             () => serialize(hashWithIncorrectLength, 'hash96'),
             Error,
@@ -117,8 +133,8 @@ describe('SimpleSerialize - serializes hash97', () => {
 
     /** hash32 */
 
-	it(`successfully serializes hash97`, () => {        
-        
+	it(`successfully serializes hash97`, () => {
+
         let hashInput = hexToBytes('ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015adba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015adba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015adqq');
         let result = serialize(hashInput, 'hash97');
 
@@ -128,9 +144,9 @@ describe('SimpleSerialize - serializes hash97', () => {
     });
 
     it(`errors when serializing hash97, given hash less than 97 bytes`, () => {
-        
-        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'); 
-        
+
+        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
+
         assert.throws(
             () => serialize(hashWithIncorrectLength, 'hash97'),
             Error,
@@ -140,9 +156,9 @@ describe('SimpleSerialize - serializes hash97', () => {
     });
 
     it(`errors when serializing hash97, given hash greater than 97 bytes`, () => {
-        
-        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015addfsdfds'); 
-        
+
+        let hashWithIncorrectLength = hexToBytes('ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015addfsdfds');
+
         assert.throws(
             () => serialize(hashWithIncorrectLength, 'hash97'),
             Error,
@@ -156,8 +172,8 @@ describe('SimpleSerialize - serializes addresses', () => {
 
     /** addresses */
 
-    it(`serializes addresses`, () => {        
-        
+    it(`serializes addresses`, () => {
+
         let addressInput = hexToBytes('e17cb53f339a726e0b347bbad221ad7b50dc2a30');
         let result = serialize(addressInput, 'address');
 
@@ -165,11 +181,11 @@ describe('SimpleSerialize - serializes addresses', () => {
         assert.equal(result, addressInput, 'address result should be same as input');
 
     });
-    
+
     it(`errors when serializing address, given address less than 20 bytes`, () => {
-        
-        let addressWithIncorrectLength = hexToBytes('e17cb53f339a726e0b34'); 
-        
+
+        let addressWithIncorrectLength = hexToBytes('e17cb53f339a726e0b34');
+
         assert.throws(
             () => serialize(addressWithIncorrectLength, 'address'),
             Error,
@@ -179,9 +195,9 @@ describe('SimpleSerialize - serializes addresses', () => {
     });
 
     it(`errors when serializing address, given address greater than 20 bytes`, () => {
-        
+
         let addressWithIncorrectLength = hexToBytes('e17cb53f339a726e0b347bbad221ad7b50dc2a300000000');
-        
+
         assert.throws(
             () => serialize(addressWithIncorrectLength, 'address'),
             Error,
@@ -193,8 +209,8 @@ describe('SimpleSerialize - serializes addresses', () => {
 
 describe('SimpleSerialize - serializes signed integers', () => {
 
-    it(`serializes int8`, () => {        
-        
+    it(`serializes int8`, () => {
+
         let intInput = 5;
         let result = serialize(intInput, 'int8');
         let intResult = result.readInt8(0);
@@ -204,8 +220,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
     });
 
-    it(`serializes int8 (negative)`, () => {        
-        
+    it(`serializes int8 (negative)`, () => {
+
         let intInput = -5;
         let result = serialize(intInput, 'int8');
         let intResult = result.readInt8(0);
@@ -215,8 +231,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
     });
 
-    it(`serializes int16`, () => {        
-        
+    it(`serializes int16`, () => {
+
         let intInput = 32000;
         let result = serialize(intInput, 'int16');
         let intResult = result.readInt16BE(0);
@@ -226,8 +242,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
     });
 
-    it(`serializes int16 (negative)`, () => {        
-        
+    it(`serializes int16 (negative)`, () => {
+
         let intInput = -32000;
         let result = serialize(intInput, 'int16');
         let intResult = result.readInt16BE(0);
@@ -259,8 +275,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
 	});
 
-    it(`serializes int32`, () => {        
-        
+    it(`serializes int32`, () => {
+
         let intInput = 1000000000;
         let result = serialize(intInput, 'int32');
         let intResult = result.readInt32BE(0);
@@ -270,8 +286,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
     });
 
-    it(`serializes int32 (negative)`, () => {        
-        
+    it(`serializes int32 (negative)`, () => {
+
         let intInput = -1000000000;
         let result = serialize(intInput, 'int32');
         let intResult = result.readInt32BE(0);
@@ -281,8 +297,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
     });
 
-    it(`serializes int64`, () => {        
-        
+    it(`serializes int64`, () => {
+
         let intInput = new BN(100000000000);
         let result = serialize(intInput, 'int64');
         let intResult = new BN([...result], 16, 'be').fromTwos(64);
@@ -292,8 +308,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
     });
 
-    it(`serializes int64 (negative)`, () => {        
-        
+    it(`serializes int64 (negative)`, () => {
+
         let intInput = new BN(-100000000000);
         let result = serialize(intInput, 'int64');
         let intResult = new BN([...result], 16, 'be').fromTwos(64);
@@ -303,8 +319,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
     });
 
-    it(`serializes int128`, () => {        
-        
+    it(`serializes int128`, () => {
+
         let intInput = new BN('123').pow(new BN(5));
         let result = serialize(intInput, 'int128');
         let intResult = new BN([...result], 32, 'be').fromTwos(256);
@@ -314,8 +330,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
     });
 
-    it(`serializes int256 (negative)`, () => {        
-        
+    it(`serializes int256 (negative)`, () => {
+
         let intInput = new BN('-123').pow(new BN(25));
         let result = serialize(intInput, 'int256');
         let intResult = new BN([...result], 32, 'be').fromTwos(256);
@@ -326,8 +342,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
     });
 
 
-    it(`serializes int256`, () => {        
-        
+    it(`serializes int256`, () => {
+
         let intInput = new BN('123').pow(new BN(25));
         let result = serialize(intInput, 'int256');
         let intResult = new BN([...result], 32, 'be').fromTwos(256);
@@ -337,8 +353,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
     });
 
-    it(`serializes int256 (negative)`, () => {        
-        
+    it(`serializes int256 (negative)`, () => {
+
         let intInput = new BN('-123').pow(new BN(25));
         let result = serialize(intInput, 'int256');
         let intResult = new BN([...result], 32, 'be').fromTwos(256);
@@ -352,8 +368,8 @@ describe('SimpleSerialize - serializes signed integers', () => {
 
 describe('SimpleSerialize - serializes unsigned integers', () => {
 
-    it(`serializes uint8`, () => {        
-            
+    it(`serializes uint8`, () => {
+
         let intInput = 5;
         let result = serialize(intInput, 'uint8');
         let intResult = result.readUInt8(0);
@@ -363,8 +379,8 @@ describe('SimpleSerialize - serializes unsigned integers', () => {
 
     });
 
-    it(`serializes uint16`, () => {        
-        
+    it(`serializes uint16`, () => {
+
         let intInput = 32000;
         let result = serialize(intInput, 'uint16');
         let intResult = result.readInt16BE(0);
@@ -374,8 +390,8 @@ describe('SimpleSerialize - serializes unsigned integers', () => {
 
     });
 
-    it(`serializes uint32`, () => {        
-        
+    it(`serializes uint32`, () => {
+
         let intInput = 1000000000;
         let result = serialize(intInput, 'uint32');
         let intResult = result.readInt32BE(0);
@@ -385,8 +401,8 @@ describe('SimpleSerialize - serializes unsigned integers', () => {
 
     });
 
-    it(`serializes uint64`, () => {        
-        
+    it(`serializes uint64`, () => {
+
         let intInput = new BN(100000000000);
         let result = serialize(intInput, 'uint64');
         let intResult = new BN([...result], 16, 'be');
@@ -396,8 +412,8 @@ describe('SimpleSerialize - serializes unsigned integers', () => {
 
     });
 
-    it(`serializes uint128`, () => {        
-        
+    it(`serializes uint128`, () => {
+
         let intInput = new BN('123').pow(new BN(5));
         let result = serialize(intInput, 'uint128');
         let intResult = new BN([...result], 32, 'be').fromTwos(256);
@@ -407,8 +423,8 @@ describe('SimpleSerialize - serializes unsigned integers', () => {
 
     });
 
-    it(`serializes uint256`, () => {        
-        
+    it(`serializes uint256`, () => {
+
         let intInput = new BN('123').pow(new BN(25));
         let result = serialize(intInput, 'uint256');
         let intResult = new BN([...result], 32, 'be').fromTwos(256);
@@ -422,8 +438,8 @@ describe('SimpleSerialize - serializes unsigned integers', () => {
 
 describe('SimpleSerialize - serializes bytes', () => {
 
-    it(`serializes bytes`, () => {        
-        
+    it(`serializes bytes`, () => {
+
         let bytesArray = [];
         for(var i = 0; i < 280; i++){
             bytesArray.push(1);
@@ -444,7 +460,7 @@ describe('SimpleSerialize - serializes arrays of elements (of same type)', () =>
 
     it(`serializes arrays of elements (of same type) - boolean`, () => {
         let arrayInput = [true, false, false];
-        
+
         let result = serialize(arrayInput, ['bool']);
 
         let actualLength = result.readUInt32BE(0);
@@ -470,7 +486,7 @@ describe('SimpleSerialize - serializes arrays of elements (of same type)', () =>
         assert.isNotNull(result);
 
         assert.equal(result.readUInt32BE(0), expectedLength)
-        
+
         let arrayResult = result.slice(4);
         assert.deepEqual(arrayResult, flatInput);
 
@@ -488,9 +504,9 @@ describe('SimpleSerialize - serializes arrays of elements (of same type)', () =>
         let expectedLength = flatInput.length; // (length + bytes)
 
         assert.isNotNull(result);
-    
+
         assert.equal(result.readUInt32BE(0), expectedLength)
-        
+
         let arrayResult = result.slice(4);
         assert.deepEqual(arrayResult, flatInput);
 
@@ -585,7 +601,7 @@ describe('SimpleSerialize - serializes arrays of elements (of same type)', () =>
             }
 
         }
-        
+
     }
 
 });
@@ -635,7 +651,7 @@ describe('SimpleSerialize - serializes objects', () => {
                 }
             }
         );
-        
+
         let offset = 0;
 
         // assert byte length
@@ -699,7 +715,7 @@ describe('SimpleSerialize - serializes objects', () => {
         let recentHash1 = 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad';
         let recentHash2 = 'aa1116bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad';
         testObj.recentBlockHashes = [
-            hexToBytes(recentHash1), 
+            hexToBytes(recentHash1),
             hexToBytes(recentHash2)
         ]
 
@@ -741,7 +757,7 @@ describe('SimpleSerialize - serializes objects', () => {
 
     function assertAttestationRecord(startOffset, result, attestRecord){
         let offset = startOffset;
-        // skip attestation record byte length because it could vary 
+        // skip attestation record byte length because it could vary
         offset += 4;
 
         // assert bitfield value
@@ -752,12 +768,12 @@ describe('SimpleSerialize - serializes objects', () => {
         let actualBitfield = result.slice(offset, (offset + expectedBitfieldByteLength));
         offset += expectedBitfieldByteLength;
         assert.equal(actualBitfield.toString('hex'), attestRecord.attesterBitfield.toString('hex'), 'Attester Bitfield type not serialised correctly');
-        
+
         // check shard id
         let actualShardId = result.readUInt32BE(offset);
         offset += 4;
         assert.equal(actualShardId, attestRecord.shardId, 'ShardId value not serialised correctly');
-        
+
         // check slot id
         let actualSlotId = result.readUInt32BE(offset);
         offset += 4;
