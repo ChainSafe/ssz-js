@@ -1,4 +1,3 @@
-const BN = require('bn.js')
 const intByteLength = require('./intBytes').intByteLength
 const readIntFromBuffer = require('./intBytes').readIntFromBuffer
 const writeIntToBuffer = require('./intBytes').writeIntToBuffer
