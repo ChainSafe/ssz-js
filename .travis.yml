@@ -20,9 +20,9 @@ jobs:
       pushd ./dist/
       sha256sum ./ssz.min.js > ./ssz.min.js.sha256
       popd
-      mdkir ./artifacts/
-      VERSION=${npx -c 'echo "$npm_package_version"'}
-      echo VERSION
+      mkdir ./artifacts/
+      VERSION=${cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'}
+      echo ${VERSION}
       cp -rv ./dist ./ssz-js-${VERSION}
       tar -zcvf ssz-js-${VERSION}.tar.gz ssz-js-${VERSION}
       cp -v ./ssz-js-${VERSION}.tar.gz ./artifacts/
