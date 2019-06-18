@@ -32,5 +32,5 @@ deploy:
     file: "./artifacts/"
     draft: true
     on:
-      repo: ChainSafe/ssz-js
-     # branch: greg/devops/auto-release
+    # repo: ChainSafe/ssz-js
+      branch: greg/devops/auto-release
