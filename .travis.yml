@@ -31,5 +31,6 @@ deploy:
     file_glob: true
     file: "./artifacts/"
     draft: true
+    skip_cleanup: true
     on:
       branch: greg/devops/auto-release
