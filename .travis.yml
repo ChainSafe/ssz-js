@@ -27,9 +27,9 @@ deploy:
     # on:
     #     branch: master
     provider: releases
-    api_key: $GH_PAGES_TOKEN
+    api_key: $RELEASE_TOKEN
+    file_glob: true
     file: "./artifacts/"
     draft: true
     on:
-    # repo: ChainSafe/ssz-js
       branch: greg/devops/auto-release
