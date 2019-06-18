@@ -27,8 +27,7 @@ deploy:
     # on:
     #     branch: master
     provider: releases
-    api_key:
-      secure: hWZZzO4LYOy79Fm2Zfms0W23PtRUk0+ZNPAazO4jL8hj0enRWKMCBw6BYNcmBSJFyBaQmiMlxop//EbJ1NN/LO69wltOo5bEKJIm+KkK/taCPTdX4fschx5J/+CKKVYzptJksX0SCIBAFYkeJm/tBUIwPSsxuf2+xS1cj4TJSJq5kciaHwT2DUNEt6RisIQ+3VZWzrX7DW3o1WKjM1ZHa0XnQVqDWca+zNnJMhq2kUmsnLLKtEwkuLZOtqUKHa8issXxbJLJ57CIG3RLWsAh8g9o7YLNJgV0nfa4Q/KbPxIGe4K2NwxdGfikrjzgLh+PCTrkW0qUBx337/eD9hvQxcTnbH0dHfPuiBO9p/reCXTkVbxx94gNtbb9BPQf73Fg1q2zp3rdG+fRgK3c1WlOGM8VDozUa4Kr53jZbR5D9lwWCNj0GTRaM9ZLkHWOHr80yNex1bdeKvCUpnyLYs2i+4ztsAcsUcYtlFXstwc8/M7c9vCtSMubIs8R9y6M7MPA13r94rKr7jr+7Kc/W0HjEYtHKeHlpWFq4qk0QtyEmxVFyH0GFhNBgbplE8OcP2XhrKixv0iTHw4ScCi4v0MiiwOwN16k7p8176LJCIyhH2emdtsupBr3UQyrEa6rHq83qixt7bqooxe3Fr0v+IuXZdqEjx1FqwAjAYsbSwe6VpM=
+    api_key: $GH_PAGES_TOKEN
     file: "./artifacts/"
     draft: true
     on:
