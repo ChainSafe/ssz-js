@@ -16,19 +16,7 @@ jobs:
     script:
     - yarn install
     - yarn run build
-    - |
-      pushd ./dist/
-      sha256sum ./ssz.min.js > ./ssz.min.js.sha256
-      popd
-      mkdir ./artifacts/
-      VERSION=${cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'}
-      echo ${VERSION}
-      cp -rv ./dist ./ssz-js-${VERSION}
-      tar -zcvf ssz-js-${VERSION}.tar.gz ssz-js-${VERSION}
-      cp -v ./ssz-js-${VERSION}.tar.gz ./artifacts/
-      pushd ./artifacts
-      sha256sum ./ssz-js-${VERSION}.tar.gz > ./ssz-js-${VERSION}.sha256
-      popd
+    - sh devops/artifacts.sh
 before_deploy: yarn build:docs
 deploy:
     #    - provider: pages
