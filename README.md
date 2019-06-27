@@ -1,5 +1,5 @@
 # ssz
-[![Build Status](https://travis-ci.com/ChainSafe/ssz-js.svg?branch=master)](https://travis-ci.com/ChainSafe/ssz-js)
+[![Build Status](https://travis-ci.com/ChainSafe/ssz-js.svg?branch=master)](https://travis-ci.com/ChainSafe/ssz-js) [![Greenkeeper badge](https://badges.greenkeeper.io/ChainSafe/ssz-js.svg)](https://greenkeeper.io/)
 
 Simple Serialize (SSZ)
 
