@@ -1,5 +1,7 @@
 /** @module ssz */
 import { sha256 } from "js-sha256";
+import farmhash from "farmhash";
+
 import { cache } from "./cache";
 
 /** @ignore */
@@ -12,13 +14,13 @@ function _hash(input: Buffer): Buffer {
  */
 export function hash(input: Buffer): Buffer {
   if (cache) {
-    const hexInput = input.toString('hex');
-    const cached = cache.get(hexInput);
+    const cacheInput = farmhash.hash32(input);
+    const cached = cache.get(cacheInput);
     if (cached) {
       return cached;
     }
     const result = _hash(input);
-    cache.set(hexInput, result);
+    cache.set(cacheInput, result);
     return result;
   } else {
     return _hash(input);
