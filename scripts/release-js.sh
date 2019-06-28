@@ -38,6 +38,7 @@ echo "Generating CHANGELOG..."
 github_changelog_generator -u $(cut -d "/" -f1 <<< $repo_slug) -p $(cut -d "/" -f2 <<< $repo_slug) --token $token --since-tag ${LAST_RELEASE_TAG}
 
 # Add SHA table to CHANGELOG.md
+echo "Addind table to CHANGELOG..."
 echo "|System|Binary|SHA256 Checksum|" >> CHANGELOG.md
 echo "|------|------|---------------|" >> CHANGELOG.md
 
