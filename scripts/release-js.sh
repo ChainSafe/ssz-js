@@ -52,7 +52,7 @@ cp -rv ./lib "./$LIB_NAME"
 # Generate checksums for all files in `./dist`
 echo "Generating checsums for ./dist..."
 cd ./$DIST_NAME
-for dist_file in ./$DIST_NAME; do
+for dist_file in *; do
     sha256sum $dist_file > $dist_file.sha256
 done
 cd ..
