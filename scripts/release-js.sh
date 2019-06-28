@@ -13,7 +13,6 @@ LAST_RELEASE_TAG=$(curl https://api.github.com/repos/$TRAVIS_REPO_SLUG/releases/
 branch="$GIT_BRANCH"
 repo_slug="$TRAVIS_REPO_SLUG"
 token="$API_TOKEN"
-version="$TRAVIS_TAG"
 
 REPO_NAME=$(node -p -e "require('./package.json').name")
 VERSION=$(node -p -e "require('./package.json').version")
@@ -21,7 +20,7 @@ DIST_NAME="web-$REPO_NAME-$VERSION"
 LIB_NAME="nodejs-$REPO_NAME-$VERSION"
 
 # An automatic changelog generator
-gem install github_changelog_generator
+sudo gem install github_changelog_generator
 
 # Pre-Cleanup
 echo "Performing pre-cleanup..."
@@ -94,8 +93,8 @@ body="$(cat CHANGELOG.md)"
 echo "Generating JSON for CHANGELOG..."
 jq -n \
   --arg body "$body" \
-  --arg name "$version" \
-  --arg tag_name "$version" \
+  --arg name "$VERSION" \
+  --arg tag_name "$VERSION" \
   --arg target_commitish "$branch" \
   '{
     body: $body,
@@ -107,5 +106,5 @@ jq -n \
   }' > CHANGELOG.md
 
 # Deploy new release
-echo "Create release $version for repo: $repo_slug, branch: $branch"
+echo "Create release $VERSION for repo: $repo_slug, branch: $branch"
 curl -H "Authorization: token $token" --data @CHANGELOG.md "https://api.github.com/repos/$repo_slug/releases"
