@@ -29,6 +29,8 @@ rm -rf ./artifacts/
 
 # Create directory where all artifacts will be stored
 mkdir ./artifacts/
+mkdir ./$DIST_NAME
+mkdir ./$LIB_NAME
 
 # Create changelog
 touch CHANGELOG.md
@@ -43,12 +45,14 @@ echo "|System|Binary|SHA256 Checksum|" >> CHANGELOG.md
 echo "|------|------|---------------|" >> CHANGELOG.md
 
 # Duplicate `./dist`
-cp -rv ./dist ./$DIST_NAME
+echo "Copying lib and dist"
+cp -rv ./dist "./$DIST_NAME"
+cp -rv ./lib "./$LIB_NAME"
 
 # Generate checksums for all files in `./dist`
 echo "Generating checsums for ./dist..."
 cd ./$DIST_NAME
-for dist_file in *; do
+for dist_file in ./$DIST_NAME; do
     sha256sum $dist_file > $dist_file.sha256
 done
 cd ..
@@ -65,10 +69,6 @@ shaArr=$(cat ./artifacts/$DIST_NAME.sha256)
 sha=$(${shaArr//;/ })
 row="|WEB|$DIST_NAME.tar.gz|$sha|"
 echo $row >> CHANGELOG.md
-
-# Duplicate `./lib`
-echo "Copying lib..."
-cp -rv ./lib ./$LIB_NAME
 
 # Generate tarball & checksum for `./lib`
 echo "Zipping ./lib..."
