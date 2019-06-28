@@ -58,6 +58,7 @@
   "dependencies": {
     "@types/bn.js": "^4.11.4",
     "assert": "^1.4.1",
+    "bcrypto": "^4.0.1",
     "bn.js": "^4.11.8",
     "js-sha256": "^0.9.0"
   }
