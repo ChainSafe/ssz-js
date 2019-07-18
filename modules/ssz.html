@@ -79,6 +79,8 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/ssz.bitlisttype.html" class="tsd-kind-icon">Bit<wbr>List<wbr>Type</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/ssz.bitvectortype.html" class="tsd-kind-icon">Bit<wbr>Vector<wbr>Type</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/ssz.booltype.html" class="tsd-kind-icon">Bool<wbr>Type</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/ssz.bytelisttype.html" class="tsd-kind-icon">Byte<wbr>List<wbr>Type</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/ssz.bytevectortype.html" class="tsd-kind-icon">Byte<wbr>Vector<wbr>Type</a></li>
@@ -99,6 +101,8 @@
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="ssz.html#anycontainertype" class="tsd-kind-icon">Any<wbr>Container<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="ssz.html#anyssztype" class="tsd-kind-icon">AnySSZType</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="ssz.html#arraytype" class="tsd-kind-icon">Array<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="ssz.html#bits" class="tsd-kind-icon">Bits</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="ssz.html#bitstype" class="tsd-kind-icon">Bits<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="ssz.html#bool" class="tsd-kind-icon">Bool</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="ssz.html#bytes" class="tsd-kind-icon">Bytes</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="ssz.html#bytestype" class="tsd-kind-icon">Bytes<wbr>Type</a></li>
@@ -116,6 +120,7 @@
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="ssz.html#digitspattern" class="tsd-kind-icon">digits<wbr>Pattern</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="ssz.html#numberpattern" class="tsd-kind-icon">number<wbr>Pattern</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="ssz.html#uintpattern" class="tsd-kind-icon">uint<wbr>Pattern</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="ssz.html#zerohashes" class="tsd-kind-icon">zero<wbr>Hashes</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -147,7 +152,7 @@
 					<div class="tsd-signature tsd-kind-icon">Any<wbr>Container<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ssz.containertype.html" class="tsd-signature-type">ContainerType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.simplecontainertype.html" class="tsd-signature-type">SimpleContainerType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L106">types.ts:106</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L121">types.ts:121</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -157,7 +162,7 @@
 					<div class="tsd-signature tsd-kind-icon">AnySSZType<span class="tsd-signature-symbol">:</span> <a href="ssz.html#fullssztype" class="tsd-signature-type">FullSSZType</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#simplessztype" class="tsd-signature-type">SimpleSSZType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L108">types.ts:108</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L123">types.ts:123</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -167,7 +172,27 @@
 					<div class="tsd-signature tsd-kind-icon">Array<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ssz.listtype.html" class="tsd-signature-type">ListType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.vectortype.html" class="tsd-signature-type">VectorType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L89">types.ts:89</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L105">types.ts:105</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="bits" class="tsd-anchor"></a>
+					<h3>Bits</h3>
+					<div class="tsd-signature tsd-kind-icon">Bits<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BitList</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BitVector</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L9">types.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="bitstype" class="tsd-anchor"></a>
+					<h3>Bits<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Bits<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ssz.bitlisttype.html" class="tsd-signature-type">BitListType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.bitvectortype.html" class="tsd-signature-type">BitVectorType</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L79">types.ts:79</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -177,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">Bool<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L7">types.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L8">types.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -187,7 +212,7 @@
 					<div class="tsd-signature tsd-kind-icon">Bytes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Uint8Array</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L8">types.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L10">types.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -197,17 +222,17 @@
 					<div class="tsd-signature tsd-kind-icon">Bytes<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ssz.bytelisttype.html" class="tsd-signature-type">ByteListType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.bytevectortype.html" class="tsd-signature-type">ByteVectorType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L76">types.ts:76</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L91">types.ts:91</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
 					<a name="fullssztype" class="tsd-anchor"></a>
 					<h3>FullSSZType</h3>
-					<div class="tsd-signature tsd-kind-icon">FullSSZType<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ssz.uinttype.html" class="tsd-signature-type">UintType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.booltype.html" class="tsd-signature-type">BoolType</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#bytestype" class="tsd-signature-type">BytesType</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#arraytype" class="tsd-signature-type">ArrayType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.containertype.html" class="tsd-signature-type">ContainerType</a></div>
+					<div class="tsd-signature tsd-kind-icon">FullSSZType<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ssz.uinttype.html" class="tsd-signature-type">UintType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.booltype.html" class="tsd-signature-type">BoolType</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#bitstype" class="tsd-signature-type">BitsType</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#bytestype" class="tsd-signature-type">BytesType</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#arraytype" class="tsd-signature-type">ArrayType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.containertype.html" class="tsd-signature-type">ContainerType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L102">types.ts:102</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L117">types.ts:117</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -220,10 +245,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
 					<a name="serializablevalue" class="tsd-anchor"></a>
 					<h3>Serializable<wbr>Value</h3>
-					<div class="tsd-signature tsd-kind-icon">Serializable<wbr>Value<span class="tsd-signature-symbol">:</span> <a href="ssz.html#uint" class="tsd-signature-type">Uint</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#bool" class="tsd-signature-type">Bool</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#bytes" class="tsd-signature-type">Bytes</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.serializablearray.html" class="tsd-signature-type">SerializableArray</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.serializableobject.html" class="tsd-signature-type">SerializableObject</a></div>
+					<div class="tsd-signature tsd-kind-icon">Serializable<wbr>Value<span class="tsd-signature-symbol">:</span> <a href="ssz.html#uint" class="tsd-signature-type">Uint</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#bool" class="tsd-signature-type">Bool</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#bits" class="tsd-signature-type">Bits</a><span class="tsd-signature-symbol"> | </span><a href="ssz.html#bytes" class="tsd-signature-type">Bytes</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.serializablearray.html" class="tsd-signature-type">SerializableArray</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.serializableobject.html" class="tsd-signature-type">SerializableObject</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L14">types.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L15">types.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -233,7 +258,7 @@
 					<div class="tsd-signature tsd-kind-icon">Simple<wbr>Primitive<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L19">types.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L20">types.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -243,7 +268,7 @@
 					<div class="tsd-signature tsd-kind-icon">SimpleSSZType<span class="tsd-signature-symbol">:</span> <a href="ssz.html#simpleprimitivetype" class="tsd-signature-type">SimplePrimitiveType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.simplelisttype.html" class="tsd-signature-type">SimpleListType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.simplevectortype.html" class="tsd-signature-type">SimpleVectorType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/ssz.simplecontainertype.html" class="tsd-signature-type">SimpleContainerType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L41">types.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L42">types.ts:42</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -260,7 +285,7 @@
 					<div class="tsd-signature tsd-kind-icon">Uint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/types.ts#L6">types.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/types.ts#L7">types.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -270,10 +295,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="bytespattern" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> bytes<wbr>Pattern</h3>
-					<div class="tsd-signature tsd-kind-icon">bytes<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^bytes\d*$/</span></div>
+					<div class="tsd-signature tsd-kind-icon">bytes<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^bytes\d+$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L13">util/types.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L14">util/types.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -283,7 +308,7 @@
 					<div class="tsd-signature tsd-kind-icon">digits<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/\d+$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L15">util/types.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L16">util/types.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -293,7 +318,7 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^number/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L19">util/types.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L20">util/types.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -303,7 +328,17 @@
 					<div class="tsd-signature tsd-kind-icon">uint<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^(uint|number)\d+$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L17">util/types.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L18">util/types.ts:18</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="zerohashes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> zero<wbr>Hashes</h3>
+					<div class="tsd-signature tsd-kind-icon">zero<wbr>Hashes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[Buffer.alloc(BYTES_PER_CHUNK)]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/hash.ts#L12">util/hash.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -320,7 +355,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/clone.ts#L53">clone.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/clone.ts#L59">clone.ts:59</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -334,12 +369,18 @@
 
 <span class="hljs-keyword">const</span> buf: Buffer = clone(
   Buffer.from(<span class="hljs-string">"abcd"</span>, <span class="hljs-string">"hex"</span>),
-  <span class="hljs-string">"bytes"</span>
+  {
+    elementType: <span class="hljs-string">"byte"</span>,
+    maxLength: <span class="hljs-number">10</span>,
+  }
 );
 
 <span class="hljs-keyword">const</span> arr: <span class="hljs-built_in">number</span>[] = clone(
   [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
-  [<span class="hljs-string">"uint32"</span>]
+  {
+    elementType: <span class="hljs-string">"uint32"</span>,
+    maxLength: <span class="hljs-number">10</span>,
+  }
 );
 
 <span class="hljs-keyword">interface</span> myData {
@@ -348,7 +389,6 @@
   c: Buffer;
 }
 <span class="hljs-keyword">const</span> myDataType: SimpleContainerType = {
-  name: <span class="hljs-string">"MyData"</span>,
   fields: [
     [<span class="hljs-string">"a"</span>, <span class="hljs-string">"uint16"</span>],
     [<span class="hljs-string">"b"</span>, <span class="hljs-string">"bool"</span>],
@@ -383,7 +423,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L21">util/types.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L22">util/types.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -406,7 +446,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/deserialize.ts#L92">deserialize.ts:92</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/deserialize.ts#L112">deserialize.ts:112</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -437,8 +477,25 @@
 <span class="hljs-comment">// deserialize a boolean</span>
 <span class="hljs-keyword">const</span> b: <span class="hljs-built_in">boolean</span> = deserialize(data, <span class="hljs-string">"bool"</span>);
 
-<span class="hljs-comment">// deserialize a variable-length byte array</span>
-<span class="hljs-keyword">const</span> buf1: Buffer = deserialize(data, <span class="hljs-string">"bytes"</span>);
+<span class="hljs-comment">// deserialize a bit list</span>
+<span class="hljs-keyword">import</span> {BitList} <span class="hljs-keyword">from</span> <span class="hljs-string">"@chainsafe/bit-utils"</span>;
+<span class="hljs-keyword">const</span> bl: BitList = deserialize(data, {
+  elementType: <span class="hljs-string">"bool"</span>,
+  maxLength: <span class="hljs-number">10</span>, <span class="hljs-comment">// max number of bits</span>
+});
+
+<span class="hljs-comment">// deserialize a bit vector</span>
+<span class="hljs-keyword">import</span> {BitVector} <span class="hljs-keyword">from</span> <span class="hljs-string">"@chainsafe/bit-utils"</span>;
+<span class="hljs-keyword">const</span> bv: BitVector = deserialize(data, {
+  elementType: <span class="hljs-string">"bool"</span>,
+  length: <span class="hljs-number">10</span>, <span class="hljs-comment">// length in bits</span>
+});
+
+<span class="hljs-comment">// deserialize a variable-length byte array, max-length required</span>
+<span class="hljs-keyword">const</span> buf1: Buffer = deserialize(data, {
+  elementType: <span class="hljs-string">"byte"</span>, <span class="hljs-comment">// "byte", "uint8", or "number8"</span>
+  maxLength: <span class="hljs-number">10</span>, <span class="hljs-comment">// max number of bytes</span>
+});
 
 <span class="hljs-comment">// deserialize a fixed-length byte array</span>
 <span class="hljs-keyword">const</span> buf2: Buffer = serialize(
@@ -446,17 +503,17 @@
   <span class="hljs-string">"bytes2"</span> <span class="hljs-comment">// "bytesN", N == length in bytes</span>
 );
 
-<span class="hljs-comment">// deserialize a variable-length array</span>
-<span class="hljs-keyword">const</span> arr1: <span class="hljs-built_in">number</span>[] = deserialize(
-  data,
-  [<span class="hljs-string">"uint32"</span>] <span class="hljs-comment">// [elementType]</span>
-);
+<span class="hljs-comment">// deserialize a variable-length array, max-length required</span>
+<span class="hljs-keyword">const</span> arr1: <span class="hljs-built_in">number</span>[] = deserialize(data, {
+  elementType: <span class="hljs-string">"uint32"</span>,
+  maxLength: <span class="hljs-number">10</span>, <span class="hljs-comment">// max number of elements</span>
+});
 
 <span class="hljs-comment">// deserialize a fixed-length array</span>
-<span class="hljs-keyword">const</span> arr2: <span class="hljs-built_in">number</span>[] = deserialize(
-  [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
-  [<span class="hljs-string">"uint32"</span>, <span class="hljs-number">6</span>] <span class="hljs-comment">// [elementType, arrayLength]</span>
-);
+<span class="hljs-keyword">const</span> arr2: <span class="hljs-built_in">number</span>[] = deserialize([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], {
+  elementType: <span class="hljs-string">"uint32"</span>,
+  length: <span class="hljs-number">6</span>,
+});
 
 <span class="hljs-comment">// deserialize an object</span>
 <span class="hljs-keyword">interface</span> myData {
@@ -465,7 +522,6 @@
   c: Buffer;
 }
 <span class="hljs-keyword">const</span> myDataType: SimpleContainerType = {
-  name: <span class="hljs-string">"MyData"</span>,
   fields: [
     [<span class="hljs-string">"a"</span>, <span class="hljs-string">"uint16"</span>], <span class="hljs-comment">// [fieldName, fieldType]</span>
     [<span class="hljs-string">"b"</span>, <span class="hljs-string">"bool"</span>],
@@ -497,7 +553,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/equals.ts#L51">equals.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/equals.ts#L56">equals.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -512,17 +568,22 @@ equals(<span class="hljs-literal">true</span>, <span class="hljs-literal">true</
 equals(
   Buffer.from(<span class="hljs-string">"abcd"</span>, <span class="hljs-string">"hex"</span>),
   Buffer.from(<span class="hljs-string">"abcd"</span>, <span class="hljs-string">"hex"</span>),
-  <span class="hljs-string">"bytes"</span>
+  {
+    elementType: <span class="hljs-string">"byte"</span>,
+    maxLength: <span class="hljs-number">100</span>,
+  }
 );
 
 equals(
   [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
   [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
-  [<span class="hljs-string">"uint32"</span>]
+  {
+    elementType: <span class="hljs-string">"uint32"</span>,
+    maxLength: <span class="hljs-number">10</span>,
+  }
 );
 
 <span class="hljs-keyword">const</span> myDataType: SimpleContainerType = {
-  name: <span class="hljs-string">"MyData"</span>,
   fields: [
     [<span class="hljs-string">"a"</span>, <span class="hljs-string">"uint16"</span>],
     [<span class="hljs-string">"b"</span>, <span class="hljs-string">"bool"</span>],
@@ -561,7 +622,7 @@ equals(
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/hash.ts#L7">hash.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/hash.ts#L7">hash.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -589,7 +650,7 @@ equals(
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/hashTreeRoot.ts#L81">hashTreeRoot.ts:81</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/hashTreeRoot.ts#L104">hashTreeRoot.ts:104</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -611,8 +672,25 @@ buf = hashTreeRoot(<span class="hljs-keyword">new</span> BN(<span class="hljs-st
 <span class="hljs-comment">// merkleize a boolean</span>
 buf = hashTreeRoot(<span class="hljs-literal">true</span>, <span class="hljs-string">"bool"</span>);
 
-<span class="hljs-comment">// merkleize a variable-length byte array</span>
-buf = hashTreeRoot(Buffer.from(<span class="hljs-string">"abcd"</span>, <span class="hljs-string">"hex"</span>), <span class="hljs-string">"bytes"</span>);
+<span class="hljs-comment">// merkleize a bit list</span>
+<span class="hljs-keyword">import</span> {BitList} <span class="hljs-keyword">from</span> <span class="hljs-string">"@chainsafe/bit-utils"</span>;
+buf = hashTreeRoot(BitList.fromBitfield(Buffer.alloc(<span class="hljs-number">1</span>), <span class="hljs-number">8</span>), {
+  elementType: <span class="hljs-string">"bool"</span>,
+  maxLength: <span class="hljs-number">10</span>, <span class="hljs-comment">// max number of bits</span>
+});
+
+<span class="hljs-comment">// merkleize a bit vector</span>
+<span class="hljs-keyword">import</span> {BitVector} <span class="hljs-keyword">from</span> <span class="hljs-string">"@chainsafe/bit-utils"</span>;
+buf = hashTreeRoot(BitVector.fromBitfield(Buffer.alloc(<span class="hljs-number">1</span>), <span class="hljs-number">8</span>), {
+  elementType: <span class="hljs-string">"bool"</span>,
+  length: <span class="hljs-number">8</span>, <span class="hljs-comment">// length in bits</span>
+});
+
+<span class="hljs-comment">// merkleize a variable-length byte array, max-length required</span>
+buf = hashTreeRoot(Buffer.from(<span class="hljs-string">"abcd"</span>, <span class="hljs-string">"hex"</span>), {
+  elementType: <span class="hljs-string">"byte"</span>, <span class="hljs-comment">// "byte", "uint8", or "number8"</span>
+  maxLength: <span class="hljs-number">10</span>, <span class="hljs-comment">// max number of bytes</span>
+});
 
 <span class="hljs-comment">// merkleize a fixed-length byte array</span>
 buf = hashTreeRoot(
@@ -620,21 +698,20 @@ buf = hashTreeRoot(
   <span class="hljs-string">"bytes2"</span> <span class="hljs-comment">// "bytesN", N == length in bytes</span>
 );
 
-<span class="hljs-comment">// merkleize a variable-length array</span>
-buf = hashTreeRoot(
-  [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
-  [<span class="hljs-string">"uint32"</span>] <span class="hljs-comment">// [elementType]</span>
-);
+<span class="hljs-comment">// merkleize a variable-length array, max-length required</span>
+buf = hashTreeRoot([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], {
+  elementType: <span class="hljs-string">"uint32"</span>,
+  maxLength: <span class="hljs-number">10</span>, <span class="hljs-comment">// max number of elements</span>
+});
 
 <span class="hljs-comment">// merkleize a fixed-length array</span>
-buf = hashTreeRoot(
-  [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
-  [<span class="hljs-string">"uint32"</span>, <span class="hljs-number">6</span>] <span class="hljs-comment">// [elementType, arrayLength]</span>
-);
+buf = hashTreeRoot([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], {
+  elementType: <span class="hljs-string">"uint32"</span>,
+  length: <span class="hljs-number">6</span>,
+});
 
 <span class="hljs-comment">// merkleize an object</span>
 <span class="hljs-keyword">const</span> myDataType: SimpleContainerType = {
-  name: <span class="hljs-string">"MyData"</span>,
   fields: [
     [<span class="hljs-string">"a"</span>, <span class="hljs-string">"uint16"</span>], <span class="hljs-comment">// [fieldName, fieldType]</span>
     [<span class="hljs-string">"b"</span>, <span class="hljs-string">"bool"</span>],
@@ -666,7 +743,7 @@ buf = hashTreeRoot({a: <span class="hljs-number">10</span>, b: <span class="hljs
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L121">util/types.ts:121</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L128">util/types.ts:128</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -689,7 +766,7 @@ buf = hashTreeRoot({a: <span class="hljs-number">10</span>, b: <span class="hljs
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L128">util/types.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L135">util/types.ts:135</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -712,7 +789,7 @@ buf = hashTreeRoot({a: <span class="hljs-number">10</span>, b: <span class="hljs
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L117">util/types.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L124">util/types.ts:124</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -735,7 +812,7 @@ buf = hashTreeRoot({a: <span class="hljs-number">10</span>, b: <span class="hljs
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L143">util/types.ts:143</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L152">util/types.ts:152</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -764,7 +841,7 @@ buf = hashTreeRoot({a: <span class="hljs-number">10</span>, b: <span class="hljs
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/util/types.ts#L28">util/types.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/util/types.ts#L29">util/types.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -792,7 +869,7 @@ buf = hashTreeRoot({a: <span class="hljs-number">10</span>, b: <span class="hljs
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/serialize.ts#L80">serialize.ts:80</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/serialize.ts#L100">serialize.ts:100</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -814,8 +891,25 @@ buf = serialize(<span class="hljs-keyword">new</span> BN(<span class="hljs-strin
 <span class="hljs-comment">// serialize a boolean</span>
 buf = serialize(<span class="hljs-literal">true</span>, <span class="hljs-string">"bool"</span>);
 
-<span class="hljs-comment">// serialize a variable-length byte array</span>
-buf = serialize(Buffer.from(<span class="hljs-string">"abcd"</span>, <span class="hljs-string">"hex"</span>), <span class="hljs-string">"bytes"</span>);
+<span class="hljs-comment">// serialize a bit list</span>
+<span class="hljs-keyword">import</span> {BitList} <span class="hljs-keyword">from</span> <span class="hljs-string">"@chainsafe/bit-utils"</span>;
+buf = serialize(BitList.fromBitfield(Buffer.alloc(<span class="hljs-number">1</span>), <span class="hljs-number">8</span>), {
+  elementType: <span class="hljs-string">"bool"</span>,
+  maxLength: <span class="hljs-number">10</span>, <span class="hljs-comment">// max number of bits</span>
+});
+
+<span class="hljs-comment">// serialize a bit vector</span>
+<span class="hljs-keyword">import</span> {BitVector} <span class="hljs-keyword">from</span> <span class="hljs-string">"@chainsafe/bit-utils"</span>;
+buf = serialize(BitVector.fromBitfield(Buffer.alloc(<span class="hljs-number">1</span>), <span class="hljs-number">8</span>), {
+  elementType: <span class="hljs-string">"bool"</span>,
+  length: <span class="hljs-number">8</span>, <span class="hljs-comment">// length in bits</span>
+});
+
+<span class="hljs-comment">// serialize a variable-length byte array, max-length required</span>
+buf = serialize(Buffer.from(<span class="hljs-string">"abcd"</span>, <span class="hljs-string">"hex"</span>), {
+  elementType: <span class="hljs-string">"byte"</span>, <span class="hljs-comment">// "byte", "uint8", or "number8"</span>
+  maxLength: <span class="hljs-number">10</span>, <span class="hljs-comment">// max number of bytes</span>
+});
 
 <span class="hljs-comment">// serialize a fixed-length byte array</span>
 buf = serialize(
@@ -823,21 +917,20 @@ buf = serialize(
   <span class="hljs-string">"bytes2"</span> <span class="hljs-comment">// "bytesN", N == length in bytes</span>
 );
 
-<span class="hljs-comment">// serialize a variable-length array</span>
-buf = serialize(
-  [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
-  [<span class="hljs-string">"uint32"</span>] <span class="hljs-comment">// [elementType]</span>
-);
+<span class="hljs-comment">// serialize a variable-length array, max-length required</span>
+buf = serialize([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], {
+  elementType: <span class="hljs-string">"uint32"</span>,
+  maxLength: <span class="hljs-number">10</span>, <span class="hljs-comment">// max number of elements</span>
+});
 
 <span class="hljs-comment">// serialize a fixed-length array</span>
-buf = serialize(
-  [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
-  [<span class="hljs-string">"uint32"</span>, <span class="hljs-number">6</span>] <span class="hljs-comment">// [elementType, arrayLength]</span>
-);
+buf = serialize([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], {
+  elementType: <span class="hljs-string">"uint32"</span>,
+  length: <span class="hljs-number">6</span>,
+});
 
 <span class="hljs-comment">// serialize an object</span>
 <span class="hljs-keyword">const</span> myDataType: SimpleContainerType = {
-  name: <span class="hljs-string">"MyData"</span>,
   fields: [
     [<span class="hljs-string">"a"</span>, <span class="hljs-string">"uint16"</span>], <span class="hljs-comment">// [fieldName, fieldType]</span>
     [<span class="hljs-string">"b"</span>, <span class="hljs-string">"bool"</span>],
@@ -869,7 +962,7 @@ buf = serialize({a: <span class="hljs-number">10</span>, b: <span class="hljs-li
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/3f8a67b/src/signingRoot.ts#L53">signingRoot.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/ChainSafe/ssz-js/blob/2156fb9/src/signingRoot.ts#L52">signingRoot.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -884,7 +977,6 @@ buf = serialize({a: <span class="hljs-number">10</span>, b: <span class="hljs-li
   c: Buffer; <span class="hljs-comment">// &lt;- signature</span>
 }
 <span class="hljs-keyword">const</span> myDataType: SimpleContainerType = {
-  name: <span class="hljs-string">"MyData"</span>,
   fields: [
     [<span class="hljs-string">"a"</span>, <span class="hljs-string">"uint16"</span>],
     [<span class="hljs-string">"b"</span>, <span class="hljs-string">"bool"</span>],
@@ -938,6 +1030,12 @@ verify(publicKey, signingRoot(d, myDataType), d.c); <span class="hljs-comment">/
 						<a href="../enums/ssz.type.html" class="tsd-kind-icon">Type</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/ssz.bitlisttype.html" class="tsd-kind-icon">Bit<wbr>List<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/ssz.bitvectortype.html" class="tsd-kind-icon">Bit<wbr>Vector<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/ssz.booltype.html" class="tsd-kind-icon">Bool<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
@@ -983,6 +1081,12 @@ verify(publicKey, signingRoot(d, myDataType), d.c); <span class="hljs-comment">/
 						<a href="ssz.html#arraytype" class="tsd-kind-icon">Array<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="ssz.html#bits" class="tsd-kind-icon">Bits</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="ssz.html#bitstype" class="tsd-kind-icon">Bits<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="ssz.html#bool" class="tsd-kind-icon">Bool</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
@@ -1017,6 +1121,9 @@ verify(publicKey, signingRoot(d, myDataType), d.c); <span class="hljs-comment">/
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="ssz.html#uintpattern" class="tsd-kind-icon">uint<wbr>Pattern</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="ssz.html#zerohashes" class="tsd-kind-icon">zero<wbr>Hashes</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="ssz.html#clone" class="tsd-kind-icon">clone</a>
