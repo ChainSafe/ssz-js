@@ -2456,10 +2456,6 @@ js-levenshtein@^1.1.3:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.6.tgz#c6cee58eb3550372df8deb85fad5ce66ce01d59d"
 
-js-sha256@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/js-sha256/-/js-sha256-0.9.0.tgz#0b89ac166583e91ef9123644bd3c5334ce9d0966"
-
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -3617,6 +3613,11 @@ sha.js@^2.4.0, sha.js@^2.4.8:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+sha256-rust-wasm@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/sha256-rust-wasm/-/sha256-rust-wasm-1.0.0.tgz#f0833e8fe5dd2b81246257ee2faca65a1c2afdae"
+  integrity sha512-0ZKxd8qK1kRLy3cQRV568ss/DAdN3Svz/yMGnW/5UrnxbybbRtX7x4BUi4AtHJ7UFeaJHE1UGNq082L1rimjUQ==
 
 shebang-command@^1.2.0:
   version "1.2.0"
