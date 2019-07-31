@@ -19,7 +19,8 @@
     "pretest": "yarn check-types",
     "prepublishOnly": "yarn build",
     "test:spec": "nyc -r lcov -e .ts mocha --timeout 4000 -r ./.babel-register \"test/spec/**/*.test.ts\" && nyc report",
-    "test:unit": "nyc -r lcov -e .ts mocha -r ./.babel-register \"test/unit/**/*.test.ts\" && nyc report"
+    "test:unit": "nyc -r lcov -e .ts mocha -r ./.babel-register \"test/unit/**/*.test.ts\" && nyc report",
+    "benchmark": "ts-node test/benchmarks"
   },
   "homepage": "https://github.com/chainsafe/ssz-js",
   "keywords": [
@@ -41,14 +42,16 @@
     "@chainsafe/eth2.0-spec-test-util": "^0.3.0",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.17",
+    "@types/node": "^12.6.8",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
+    "benchmark": "^2.1.4",
     "chai": "^4.2.0",
     "codecov": "^3.2.0",
     "eslint": "^5.14.1",
     "mocha": "^5.2.0",
     "nyc": "^13.3.0",
+    "ts-node": "^8.3.0",
     "typedoc": "^0.14.2",
     "typedoc-plugin-external-module-name": "^2.1.0",
     "typescript": "^3.5.1",
